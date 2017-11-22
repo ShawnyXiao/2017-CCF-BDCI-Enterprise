@@ -1,0 +1,4 @@
+.idea
+src/.ipynb_checkpoints
+data/input/
+data/output/
