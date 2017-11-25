@@ -1,0 +1,20 @@
+cv2:
+
+entbase 0.656856333333
+
+alt_no  0.66868
+alt_no+alt_no_oh   0.672034666667
+alt_no+alt_no_oh+date    0.673181
+alt_no+alt_no_oh+date+alt_be_af  0.673340666667
+
+rig_type    0.675419
+rig_type+rig_type_oh_rate   0.675514
+rig_type+rig_type_oh_rate+ask_date+get_date   0.675676666667
+rig_type+rig_type_oh_rate+ask_date+get_date+get 0.675274333333
+rig_type+rig_type_oh_rate+ask_date+get_date+get+right_*year    0.675504666667
+rig_type+rig_type_oh_rate+ask_date+get_date+get+right_*year+right_*year_rate    0.675066333333
+
+####################################################
+
+cv3:
+
