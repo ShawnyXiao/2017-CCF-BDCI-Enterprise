@@ -10,11 +10,21 @@ alt_no+alt_no_oh+date+alt_be_af  0.673340666667
 rig_type    0.675419
 rig_type+rig_type_oh_rate   0.675514
 rig_type+rig_type_oh_rate+ask_date+get_date   0.675676666667
-rig_type+rig_type_oh_rate+ask_date+get_date+get 0.675274333333
-rig_type+rig_type_oh_rate+ask_date+get_date+get+right_*year    0.675504666667
-rig_type+rig_type_oh_rate+ask_date+get_date+get+right_*year+right_*year_rate    0.675066333333
 
 ####################################################
 
 cv3:
 
+rig_type+rig_type_oh_rate+ask_date+get_date+unget   0.675274333333
+rig_type+rig_type_oh_rate+ask_date+get_date+unget+right_*year    0.675504666667
+rig_type+rig_type_oh_rate+ask_date+get_date+unget+right_*year+right_*year_rate    0.675066333333
+
+rec_wz    0.676306666667
+rec_wz+rec_wz_oh    0.676078666667
+rec_wz+rec_wz_oh+rec_pos    0.675974666667
+rec_wz+rec_wz_oh+rec_pos+rec_date   0.676710666667
+rec_wz+rec_wz_oh+rec_pos+rec_date+rec_num   0.676324333333
+
+bra_num     0.676720333333
+bra_num+bra_home    0.676562666667
+bra_num+bra_home+bra_year   0.676734333333
