@@ -121,15 +121,76 @@ finzb_gb_prov+finzb_gb_rgyear+finzb_gb_hy+finzb_gb_etype    0.685991333333
 
 max_depth=9 eta=0.01    0.686335
 
-
 fstinum_gb_prov+fstinum_gb_rgyear+fstinum_gb_hy+fstinum_gb_etype    0.685787
 
 tzinum_gb_prov+tzinum_gb_rgyear+tzinum_gb_hy+tzinum_gb_etype    0.685606666667
 
 max_depth=10    0.685529666667
 max_depth=10 eta=0.01   0.686417
-max_depth=9 eta=0.01    0.686497333333
+max_depth=9 eta=0.01    0.686497333333 ✔
 max_depth=8     0.685795
 max_depth=8 eta=0.01    0.686188
 max_depth=7     0.685602
 max_depth=6     0.685509666667
+
+########################################################################################################################################
+
+cv3:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'scale_pos_weights ': 0,
+'max_depth': 9,
+'min_child_weight': 1,
+'gamma': 1,
+'subsample': 0.7,
+'colsample_bytree': 0.7,
+'lambda': 1,
+'eta': 0.02,
+'seed': 20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+drop_duplicates：
+
+alter               0.682466
+right               0.685347333333
+recruit             0.685746
+branch              0.685606666667
+invest              0.685771333333
+invest eta=0.01         0.686597333333
+lawsuit             0.686043333333
+lawsuit eta=0.01        0.686465
+project             0.685883333333
+qualification       0.685606666667
+breakfaith          0.685885333333
+
+recruit+invest+lawsuit+project+breakfaith   0.685657333333
+recruit+invest+lawsuit+project+breakfaith eta=0.01      0.686424
+lawsuit+project+breakfaith      0.685882
+
+########################################################################################################################################
+
+cv3:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'scale_pos_weights ': 0,
+'max_depth': 9,
+'min_child_weight': 1,
+'gamma': 1,
+'subsample': 0.7,
+'colsample_bytree': 0.7,
+'lambda': 1,
+'eta': 0.02,
+'seed': 20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+'num*num'     0.685699
+'num*num'+'num*num*num'     0.685513333333
+'num*num'+'num*num*num'+'num*num*num*num'+'num*num*num*num*num'     0.685954
+
+'num+num+num+num+num'+'num+num*num*num*num'   0.686386333333
+'num+num+num+num+num'+'num+num*num*num*num'+'num+num+num*num*num'   0.685393 ✖
+
+max_depth=10    0.686066333333
+max_depth=9 eta=0.01    0.686501333333
+max_depth=8     0.686419333333
+max_depth=7     0.685584333333
