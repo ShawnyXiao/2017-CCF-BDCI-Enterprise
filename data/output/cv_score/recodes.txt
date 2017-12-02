@@ -128,6 +128,8 @@ tzinum_gb_prov+tzinum_gb_rgyear+tzinum_gb_hy+tzinum_gb_etype    0.685606666667
 max_depth=10    0.685529666667
 max_depth=10 eta=0.01   0.686417
 max_depth=9 eta=0.01    0.686497333333 ✔
+max_depth=9 eta=0.01 min_child_weight=10    0.68665
+max_depth=9 eta=0.01 min_child_weight=10 gamma=0 subsample=0.75 colsample_bytree=0.75   0.686484666667
 max_depth=8     0.685795
 max_depth=8 eta=0.01    0.686188
 max_depth=7     0.685602
@@ -149,7 +151,7 @@ cv3:
 'seed': 20
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-drop_duplicates：
+drop_duplicates：(discard)
 
 alter               0.682466
 right               0.685347333333
@@ -169,7 +171,7 @@ lawsuit+project+breakfaith      0.685882
 
 ########################################################################################################################################
 
-cv3:
+cv3:(discard)
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'scale_pos_weights ': 0,
@@ -191,6 +193,74 @@ cv3:
 'num+num+num+num+num'+'num+num*num*num*num'+'num+num+num*num*num'   0.685393 ✖
 
 max_depth=10    0.686066333333
+max_depth=10 eta=0.01   0.685805
 max_depth=9 eta=0.01    0.686501333333
 max_depth=8     0.686419333333
+max_depth=8 eta=0.01    0.686368666667
 max_depth=7     0.685584333333
+
+########################################################################################################################################
+
+cv3:(discard)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'scale_pos_weights ': 0,
+'max_depth': 9,
+'min_child_weight': 1,
+'gamma': 1,
+'subsample': 0.7,
+'colsample_bytree': 0.7,
+'lambda': 1,
+'eta': 0.02,
+'seed': 20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+allnum    0.686055
+allnum+allzb    0.686053
+
+max_depth=9 eta=0.01    0.686638333333
+max_depth=10 eta=0.01   0.686057666667
+
+########################################################################################################################################
+
+cv3:(temporary discard)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'scale_pos_weights ': 0,
+'max_depth': 9,
+'min_child_weight': 1,
+'gamma': 1,
+'subsample': 0.7,
+'colsample_bytree': 0.7,
+'lambda': 1,
+'eta': 0.02,
+'seed': 20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+alt_dup_count   0.686021333333
+alt_dup_count+alt_dup   0.685596
+
+########################################################################################################################################
+
+cv3:(discard)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'scale_pos_weights ': 0,
+'max_depth': 9,
+'min_child_weight': 1,
+'gamma': 1,
+'subsample': 0.7,
+'colsample_bytree': 0.7,
+'lambda': 1,
+'eta': 0.02,
+'seed': 20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+end_date_gb_prov    0.686152666667
+end_date_gb_prov+end_date_gb_rgyear     0.686352333333
+end_date_gb_prov+end_date_gb_rgyear+end_date_gb_hy      0.686331
+end_date_gb_prov+end_date_gb_rgyear+end_date_gb_hy+end_date_gb_etype    0.686384666667
+
+max_depth=8 eta=0.01    0.687168333333
+max_depth=9 eta=0.01    0.687193666667
+max_depth=10 eta=0.01   0.686927
