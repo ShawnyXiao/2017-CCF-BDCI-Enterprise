@@ -127,8 +127,20 @@ tzinum_gb_prov+tzinum_gb_rgyear+tzinum_gb_hy+tzinum_gb_etype    0.685606666667
 
 max_depth=10    0.685529666667
 max_depth=10 eta=0.01   0.686417
-max_depth=9 eta=0.01    0.686497333333 ✔
-max_depth=9 eta=0.01 min_child_weight=10    0.68665
+max_depth=9 eta=0.01    0.686497333333 ✔    1201-xgb-0.686497(r1195+100).csv
+max_depth=9 eta=0.01 min_child_weight=10    0.68665     1202-xgb-0.686650(r1195+100).csv
+max_depth=9 eta=0.01 min_child_weight=15    0.686908666667     r1204
+max_depth=9 eta=0.01 min_child_weight=20    0.687071    r1321   1203-xgb-0.687071(r1321+100).csv
+max_depth=9 eta=0.01 min_child_weight=20 gamma=0    0.686907666667      r1171
+max_depth=9 eta=0.01 min_child_weight=20 gamma=2    0.687008333333	    r1375
+max_depth=9 eta=0.01 min_child_weight=20 gamma=3    0.687017333333	    r1321
+max_depth=9 eta=0.01 min_child_weight=20 gamma=5    0.687003333333	    r1445
+max_depth=9 eta=0.01 min_child_weight=20 subsample=0.8 colsample_bytree=0.8     0.686705    r1185
+max_depth=9 eta=0.01 min_child_weight=20 subsample=0.6 colsample_bytree=0.6     0.68701     r1284
+max_depth=9 eta=0.01 min_child_weight=20 subsample=0.5 colsample_bytree=0.5     0.686642333333     r1455
+max_depth=10 eta=0.01 min_child_weight=20       0.687028333333      r1120
+max_depth=10 eta=0.01 min_child_weight=10       0.687013            r1117
+max_depth=9 eta=0.01 min_child_weight=25    0.686781    r1141
 max_depth=9 eta=0.01 min_child_weight=10 gamma=0 subsample=0.75 colsample_bytree=0.75   0.686484666667
 max_depth=8     0.685795
 max_depth=8 eta=0.01    0.686188
@@ -137,7 +149,7 @@ max_depth=6     0.685509666667
 
 ########################################################################################################################################
 
-cv3:
+cv3:(discard)
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 'scale_pos_weights ': 0,
@@ -151,7 +163,7 @@ cv3:
 'seed': 20
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-drop_duplicates：(discard)
+drop_duplicates：
 
 alter               0.682466
 right               0.685347333333
@@ -264,3 +276,55 @@ end_date_gb_prov+end_date_gb_rgyear+end_date_gb_hy+end_date_gb_etype    0.686384
 max_depth=8 eta=0.01    0.687168333333
 max_depth=9 eta=0.01    0.687193666667
 max_depth=10 eta=0.01   0.686927
+
+########################################################################################################################################
+
+cv3:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'scale_pos_weights ': 0,
+'max_depth': 9,
+'min_child_weight': 1,
+'gamma': 1,
+'subsample': 0.7,
+'colsample_bytree': 0.7,
+'lambda': 1,
+'eta': 0.01,
+'seed': 20
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ljj_mean_min_max_sum    0.686359
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'max_depth': 9,
+'min_child_weight': 10,
+'subsample': 0.75,
+'colsample_bytree': 0.75,
+'eta': 0.01,
+'seed': 42
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ljj_mean_min_max_sum    0.687338    1202-xgb-0.687338(r951+100).csv
+ljj_mean_min_max_sum+gb_rgyear      0.687135666667
+ljj_mean_min_max_sum+gb_rgyear+ljj_3_feat   0.687385
+
+max_depth=10    0.687511333333
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'max_depth': 10,
+'min_child_weight': 10,
+'subsample': 0.75,
+'colsample_bytree': 0.75,
+'eta': 0.01,
+'seed': 42
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ljj_mean_min_max_sum+gb_rgyear+ljj_3_feat+ljj_7_feat    0.687351333333
+...+alt_be_af_gap+ask_get_month_gap+bra_begin_end_gap+inv_begin_end_gap+qua_begin_expiry_gap+bre_begin_end_gap      0.687330333333
+...+*_count/rgyear      0.687124
+...+2_count_gb_*    0.687396666667      r883
+
+529feat     0.687429666667      r930
+635feat(oh)     0.687739    r884    880cv-train-auc:0.805929666667+0.00080989930787
+
+min_child_weight=15     0.687871333333      r889    890cv-train-auc:0.792502+0.000839729718421
