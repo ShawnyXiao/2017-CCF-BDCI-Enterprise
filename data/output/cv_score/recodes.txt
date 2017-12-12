@@ -394,6 +394,25 @@ cv5:
 'seed': 42
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-635feat(oh)     0.6889616   r1051     1050cv-train-auc:0.7929562+0.000978278160852
-635feat(...+hy*rgyear)      0.6889004   r1094       1090cv-train-auc:0.794018+0.000985933669168
-635feat(...+hy*zczb)        0.6890708	r1152       1150cv-train-auc:0.7957922+0.0014367484679
+635feat(oh)                         0.6889616   r1051       1050cv-train-auc:0.7929562+0.000978278160852
+635feat(...+hy*rgyear)              0.6889004   r1094       1090cv-train-auc:0.794018+0.000985933669168
+635feat(...+hy*zczb)                0.6890708	r1152       1150cv-train-auc:0.7957922+0.0014367484679
+635feat(...+hy*zczb+etype*rgyear)   0.6890068	r1046       1050cv-train-auc:0.7911968+0.00112175940379
+
+635feat(...+hy*zczb)    max_depth=8 min_child_weight=10 eta=0.02    0.6883788
+636feat(...+hy)         max_depth=8 min_child_weight=10 eta=0.02    0.6883212   r696    700cv-train-auc:0.7821838+0.00139035166774
+636feat(...+hy)         max_depth=8 min_child_weight=15 eta=0.02    0.688627    r820    820cv-train-auc:0.7810992+0.00113036638308
+
+631feat(...-gb_hy_etype+gb_rgyearclass)     0.6887612   r1112
+629feat(...-rig_rate)                       0.6887854	r1009
+
+637feat(...+log_zczb+log_finzb)     0.6887816   r1013
+
+635feat(...+hy*zczb+etype*rgyear)   seed=13     0.6890484   r1070
+635feat(...+hy*zczb+etype*rgyear)   seed=20
+635feat(...+hy*zczb+etype*rgyear)   seed=21
+635feat(...+hy*zczb+etype*rgyear)   seed=22
+635feat(...+hy*zczb+etype*rgyear)   seed=23
+635feat(...+hy*zczb+etype*rgyear)   seed=24
+
+659feat(...+zzx)    0.6890452   r1212
