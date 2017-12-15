@@ -1,6 +1,6 @@
 # 2017-CCF-BDCI-Enterprise
 
-这应该是我的第一个数据挖掘比赛，CCF 大数据与计算智能大赛（BDCI）中的一题：[**企业经营退出风险预测**](http://www.datafountain.cn/#/competitions/271/intro)。最终的排名是 **9/569**。
+这应该是我的第一个数据挖掘比赛，CCF 大数据与计算智能大赛（BDCI）中的一题：[**企业经营退出风险预测**](http://www.datafountain.cn/#/competitions/271/intro)。最终的排名是 **9th/569** (**Top 1.58%**)。
 
 没有进入决赛十分可惜，我们队伍在复赛 **A 榜排名第 3**，但切换到 B 榜之后，便跌到第 10 了，这个现象之后我会分析一下。
 
