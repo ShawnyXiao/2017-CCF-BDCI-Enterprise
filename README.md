@@ -6,7 +6,7 @@
 
 另外一个想说的点是，我们团队在复赛 A 榜中排名第 3，但是切换 B 榜之后，便跌到第 9 了，这个现象直接导致我们团队没有进入决赛，因此我会在后文中谈一谈为什么会有这个现象。
 
-我的另一位队友 JinjinLin 也开源了解决方案，详情请见 [JinjinLin 的解决方案](https://github.com/linjinjin123/2017-CCF-BDCI-Enterprise)
+我的另两位队友 JinjinLin 和 ZhenxianZheng 也开源了解决方案，详情请见 [JinjinLin 的解决方案](https://github.com/linjinjin123/2017-CCF-BDCI-Enterprise) 和 [ZhenxianZheng 的解决方案](https://github.com/zhengzhenxian/2017-CCF-BDCI-Enterprise)
 
 ## 向导
 
@@ -30,7 +30,7 @@ CCF 举办的这次大赛中这么多比赛，为什么唯独选择这个呢？
 
 ## 代码框架
 
-第一次参赛，可以说连 Python 的语法都不熟悉，更何况 pandas 的各种操作。这时候师兄给的 baseline 就显得十分重要了。当中的各种基础操作，例如：文件读取、数据定义、分组聚集等等，对我来说都是新鲜的。其中最为关键的是**传统的数据挖掘比赛中的代码框架。**我们来看一下，这个极为经典的代码框架（非原始 baseline 框架，我做了一些修改）。
+第一次参赛，可以说连 Python 的语法都不熟悉，更何况 pandas 的各种操作。这时候师兄给的 baseline 就显得十分重要了。当中的各种基础操作，例如：文件读取、数据定义、分组聚集等等，对我来说都是新鲜的。其中最为关键的是**传统的数据挖掘比赛中的代码框架**。我们来看一下，这个极为经典的代码框架（非原始 baseline 框架，我做了一些修改）。
 
 ```python
 # 1. 导入库
